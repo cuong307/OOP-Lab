@@ -30,7 +30,7 @@ public class CompactDisc extends Disc implements Playable {
             tracks.remove(track);
             System.out.println("Track removed from the Compact Disc.");
         } else {
-            System.out.println("Track does not exist in the Compact Disc.");
+            System.out.println("Track is not found in the Compact Disc.");
         }
     }
 
@@ -43,8 +43,7 @@ public class CompactDisc extends Disc implements Playable {
     }
     
     public void play() {
-        System.out.println("Playing compact disc: " + getTitle());
-        System.out.println("Artist: " + artist);
+        System.out.println("Playing compact disc: " + getTitle() + "Artist: " + artist);
         System.out.println("Total Length: " + getLength());
 
         System.out.println("Tracks:");

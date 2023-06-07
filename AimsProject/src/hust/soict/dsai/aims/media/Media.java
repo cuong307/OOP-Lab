@@ -21,39 +21,40 @@ public abstract class Media {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+//    public void setTitle(String title) {
+//        this.title = title;
+//    }
 
     public String getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
-    }
+//    public void setCategory(String category) {
+//        this.category = category;
+//    }
 
     public float getCost() {
         return cost;
     }
 
-    public void setCost(float cost) {
-        this.cost = cost;
-    }
+//    public void setCost(float cost) {
+//        this.cost = cost;
+//    }
     
-    public Media(String title) {
-        this.title = title;
-    }
-    
+//    public Media(String title) {
+//        this.title = title;
+//    }
+//    
     public Media(String title, String category, float cost) {
         this.title = title;
         this.category = category;
         this.cost = cost;
     }
     
-    public Media(int id, String title, float cost) {
+    public Media(int id, String title,String category, float cost) {
         this.id = id;
         this.title = title;
+        this.category = category;
         this.cost = cost;
     }
     

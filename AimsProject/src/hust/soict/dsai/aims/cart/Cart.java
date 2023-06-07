@@ -76,8 +76,8 @@ public class Cart {
         System.out.println("***********************CART***********************");
         System.out.println("Ordered Items:");
         for (int i = 0; i < itemsOrdered.size(); i++) {
-            Media media = itemsOrdered.get(i);
-            System.out.println((i + 1) + ". " + media.toString());
+            Media m = itemsOrdered.get(i);
+            System.out.println((i + 1) + ". " + m.toString());
         }
         System.out.println("Total cost: " + totalCost() + " $");
         System.out.println("***************************************************");
@@ -85,10 +85,10 @@ public class Cart {
 
     public void searchByID(int id) {
         boolean found = false;
-        for (Media media : itemsOrdered) {
-            if (media.getId() == id) {
-                System.out.println("Search results for media ID " + id + ":");
-                System.out.println(media.toString());
+        for (Media m : itemsOrdered) {
+            if (m.getId() == id) {
+                System.out.println("Search by id for media: " + id);
+                System.out.println(m.toString());
                 found = true;
                 break;
             }
@@ -100,10 +100,10 @@ public class Cart {
 
     public void searchByTitle(String title) {
         boolean found = false;
-        System.out.println("Search results for media title: " + title);
-        for (Media media : itemsOrdered) {
-            if (media.isMatch(title)) {
-                System.out.println(media.toString());
+        System.out.println("Search by title for media: " + title);
+        for (Media m : itemsOrdered) {
+            if (m.isMatch(title)) {
+                System.out.println(m.toString());
                 found = true;
             }
         }
@@ -111,6 +111,7 @@ public class Cart {
             System.out.println("No matching media found with title: " + title);
         }
     }
+}
     
 //	public float totalCost() {
 //		float sum = 0;

@@ -11,15 +11,15 @@ public class Store {
     
     public void addMedia(Media media) {
         itemsInStore.add(media);
-        System.out.println("Media '" + media.getTitle() + "' has been added to the store.");
+        System.out.println("The media has been added to the store.");
     }
 
     public void removeMedia(Media media) {
         boolean removed = itemsInStore.remove(media);
         if (removed) {
-            System.out.println("Media '" + media.getTitle() + "' has been removed from the store.");
+            System.out.println("The media has been removed from the store.");
         } else {
-            System.out.println("Media '" + media.getTitle() + "' is not found in the store.");
+            System.out.println("The media is not found in the store.");
         }
     }
     
@@ -43,10 +43,18 @@ public class Store {
             System.out.println("Media with title '" + title + "' is not found in the store.");
         }
     }
-
+    
+    public float totalCost() {
+        float total = 0; 
+        for (Media media : itemsInStore) {
+            total += media.getCost();
+        }
+        return total;
+    }
+    
     public void displayMedia() {
         if (itemsInStore.isEmpty()) {
-            System.out.println("The store is empty. No media available.");
+            System.out.println("The store is empty");
         } else {
             System.out.println("Media in the store:");
             for (int i = 0; i < itemsInStore.size(); i++) {

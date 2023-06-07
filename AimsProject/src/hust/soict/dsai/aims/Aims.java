@@ -194,7 +194,7 @@ public class Aims {
             }
             displayMediaList(filteredList);
         } else {
-            System.out.println("Invalid choice.");
+            System.out.println("Invalid input.");
         }
     }
 
@@ -212,7 +212,7 @@ public class Aims {
             System.out.println("Media in cart sorted by cost:");
             displayMediaList(currentCart);
         } else {
-            System.out.println("Invalid choice.");
+            System.out.println("Invalid input.");
         }
     }
 
@@ -231,7 +231,7 @@ public class Aims {
     }
 
     public void placeOrder() {
-        System.out.println("Order placed. Thank you for shopping!");
+        System.out.println("Order placed. Thanks for shopping!");
         currentCart.clear();
     }
 
