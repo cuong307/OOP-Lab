@@ -15,8 +15,27 @@ public class Cart {
         qtyOrdered++;
         System.out.println("The disc has been added.");
     }
-
     
+	//different type of parameter
+	public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
+        for (DigitalVideoDisc disc : dvdList) {
+        	addDigitalVideoDisc(disc);
+        	}
+        }
+	
+	//pass an arbitrary number of arguments 
+	public void addDigitalVideoDisc(DigitalVideoDisc... dvdList) {
+		for (DigitalVideoDisc disc : dvdList) {
+			addDigitalVideoDisc(disc);
+		}
+	}
+
+	// add two dvds into cart
+	public void addDigitalVideoDisc(DigitalVideoDisc dvd1,DigitalVideoDisc dvd2) {
+		addDigitalVideoDisc(dvd1);
+		addDigitalVideoDisc(dvd2);
+	}
+		
     public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
         for (int i = 0; i < qtyOrdered; i++) {
             if (itemsOrdered[i].equals(disc)) {
