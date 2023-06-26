@@ -18,7 +18,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<BorderPane prefHeight="768.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="hust.soict.globalict.aims.screen.CartScreenController">
+<BorderPane prefHeight="768.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="hust.soict.dsai.aims.screen.CartScreenController">
    <top>
       <VBox prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
